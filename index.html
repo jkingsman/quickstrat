@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Quickstrat</title>
+    <!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body id="bg">
+    <h1>Quickstrat</h1>
+    <div id="strategySelection">
+
+    </div>
+    <hr>
+    <label for="player">Player: </label><input id="player" placeholder="" style="width: 40px;"><br>
+    <label for="dealer">Dealer: </label><input id="dealer" placeholder="" style="width: 40px;">
+
+    <p>Player should <strong><span id="action">start gambling.</span></strong></p>
+
+    <hr>
+    <h2>Betting &amp; Streaks</h2>
+    <p>[1 unit == minimum bet == (bankroll / 20)]
+        <p><span id="winCount">0</span>W, <span id="loseCount">0</span>L</p>
+        <p><span id="winRate">0</span>% win rate</p>
+        <p><span id="streak">0</span> win streak (<span id="upPull">2</span> units to bet on next hand)</p>
+
+
+        <script src="constants.js"></script>
+
+        <!-- begin strategy listings -->
+        <script src="strategies/fourPlus17Hit.js"></script>
+        <script src="strategies/fourPlus17Stand.js"></script>
+        <script src="strategies/oneOnly17Hit.js"></script>
+        <script src="strategies/oneOnly17Stand.js"></script>
+        <script src="strategies/twoOnly17Hit.js"></script>
+        <script src="strategies/twoOnly17Stand.js"></script>
+        <!-- eng strategy listings -->
+
+        <script src="streaks.js"></script>
+        <script src="compute.js"></script>
+        <script src="drawStrategyListing.js"></script>
+</body>
+
+</html>
