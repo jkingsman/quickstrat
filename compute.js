@@ -19,7 +19,7 @@ window.addEventListener('focus', function() {
 // focus player input when you click the window
 window.addEventListener('click', function(e) {
     // only focus input if it wasn't a direct click on the dealer box or a strategy
-    if (e.target.id !== 'dealer' && e.target.name !== 'strategyOption') {
+    if (e.target.type !== 'radio' && e.target.type !== 'text') {
         player.select();
     }
 });
