@@ -21,27 +21,35 @@
     <p>Player should <strong><span id="action">start gambling.</span></strong></p>
 
     <hr>
-    <h2>Betting &amp; Streaks</h2>
-    <p>[1 unit == minimum bet == (bankroll / 20)]
-        <p><span id="winCount">0</span>W, <span id="loseCount">0</span>L</p>
-        <p><span id="winRate">0</span>% win rate</p>
-        <p><span id="streak">0</span> win streak (<span id="upPull">2</span> units to bet on next hand with Up &amp; Pull)</p>
+    <h2>Betting &amp; Count</h2>
+    <p>
+        [<code>w</code>/<code>l</code>/<code>c</code> keys for win/loss in Up &amp; Pull.
+        <code>f</code>/<code>d</code> for five/ace count. <code>c</code> to clear all.]
+    </p>
+    <p>
+        <label for="minimum">Table Minimum/Bet Unit: </label><input id="minimum" style="width: 40px;" value="1">&nbsp;
+        <label for="bankroll">Needed Bankroll: </label><input id="bankroll" style="width: 40px;" readonly="readonly">&nbsp;
+        <label for="maxBet">Max Bet: </label><input id="maxBet" style="width: 40px;" readonly="readonly">&nbsp;
+    </p>
+    <p><span id="winCount"></span>W, <span id="loseCount"></span>L (<span id="winRate"></span>% win rate)</p>
+    <p><strong>Up &amp; Pull:</strong> <span id="streak"></span> win streak (<span id="upPull"></span> to bet)</p>
+    <p><strong>Ace/5:</strong> Count is <span id="count"></span> (<span id="countBet"></span> to bet)</p>
 
 
-        <script src="constants.js"></script>
+    <script src="constants.js"></script>
 
-        <!-- begin strategy listings -->
-        <script src="strategies/fourPlus17Hit.js"></script>
-        <script src="strategies/fourPlus17Stand.js"></script>
-        <script src="strategies/oneOnly17Hit.js"></script>
-        <script src="strategies/oneOnly17Stand.js"></script>
-        <script src="strategies/twoOnly17Hit.js"></script>
-        <script src="strategies/twoOnly17Stand.js"></script>
-        <!-- eng strategy listings -->
+    <!-- begin strategy listings -->
+    <script src="strategies/fourPlus17Hit.js"></script>
+    <script src="strategies/fourPlus17Stand.js"></script>
+    <script src="strategies/oneOnly17Hit.js"></script>
+    <script src="strategies/oneOnly17Stand.js"></script>
+    <script src="strategies/twoOnly17Hit.js"></script>
+    <script src="strategies/twoOnly17Stand.js"></script>
+    <!-- eng strategy listings -->
 
-        <script src="streaks.js"></script>
-        <script src="compute.js"></script>
-        <script src="drawStrategyListing.js"></script>
+    <script src="counts.js"></script>
+    <script src="compute.js"></script>
+    <script src="drawStrategyListing.js"></script>
 </body>
 
 </html>
